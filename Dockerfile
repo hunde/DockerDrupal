@@ -50,6 +50,10 @@ COPY docroot/ /var/www/html
 COPY config/ /home/config
 
 
+RUN curl -OL https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar \ 
+&& chmod +x drush.phar \
+&& mv drush.phar /usr/local/bin/drush
+
 
 RUN cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 

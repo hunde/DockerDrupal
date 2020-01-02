@@ -756,6 +756,4 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
    include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
-$settings = array(
- CONFIG_SYNC_DIRECTORY => '/home/config/sync',
-);
+$settings['config_sync_directory'] = '/home/config/sync';
